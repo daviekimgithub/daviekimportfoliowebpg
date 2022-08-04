@@ -38,7 +38,8 @@ app.post("/send", (req, res) => {
       host: "smtp.gmail.com",
       auth: {
         user: "davidkimani1357@gmail.com",
-        pass: "ronpgfdhbqpbnoap",
+        // pass: "ronpgfdhbqpbnoap",
+        pass: "fzxengnvsuabjtjn",
       },
     })
   );
@@ -90,7 +91,7 @@ app.post("/send", (req, res) => {
   res.render("contact", { msg: "Email has been sent thank you" });
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("server started");
 });
 
