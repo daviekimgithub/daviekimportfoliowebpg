@@ -47,8 +47,8 @@ app.post("/send", (req, res) => {
   var mailOptions = {
     from: `${req.body.email}`,
     to: "davidkimani1357@gmail.com",
-    subject: `${req.body.subject}`,
-    text: `${req.body.message}`,
+    subject: `from webpage ${req.body.subject}`,
+    text: `${req.body.message}, \n\n\n\n this message was sent by ${req.body.email}`,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
